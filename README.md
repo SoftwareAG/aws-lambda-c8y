@@ -1,31 +1,40 @@
-# PLEASE REPLACE THE PART BELOW WITH YOUR OWN CONTENT !!!
+# AWS Lambda c8y
 
 ---
 
-# Template for Cumulocity IoT OS Repos
+## Requirement
 
-This is a template repo for Cumulocity-IoT related open-source repos at SoftwareAG Organization. It contains basic guidelines for
- - Naming the Repo
- - FOSS Licensing
- - Topics
- - README.md structure
- - GitHub Setting
+ - AWS Account with Lambda Service & S3 access
+ - A Cumulocity IoT Tenant
+ - JAVA 11
+ - Maven 3.6
+ - Cumulocity Microservice SDK
+ - Cumulocity Credentials
 
-## How to use this template
+## Build
+ - Create an S3 bucket
+ - CD to the Project Folder
+ - Run the below command it will generate a JAR file
+     maven clean package
 
-Click here [Use this template](https://github.com/SoftwareAG/cumulocity-iot-template/generate) to create a new repo based on this template.
 
-## Naming the Repo
+## Deployment
 
-* Use lower case names. Combine words with a "-". Avoid using camelCase or other separators.
-* Follow the pattern: **[productname]-[reponame]-[productfeature]**.
-* Examples for good repo names: "cumulocity-kpi-trend-widget", "cumulocity-hono-microservice"
-* Examples for bad repo names: "C8YPythonAgent", "EPLApps_Samples"
+* Upload the JAR file created in the above step into an S3 bucket
+* Create an AWS Lambda function selecting runtime as Java 11 and other minimum required settings
+![Alt text](image.png)
+* Upload the JAR into S3 bucket and copy the URL
+* In the AWS Lambda function in code section select upload from S3 and past the link and save
 
 
 Please make sure that you add a meaningful description to your repo.
 
-## FOSS Licensing & Copyright
+## Logs
+
+
+## Config
+
+## Cumulocity Integration
 
 ### License
 We strongly suggest that you use the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
@@ -59,67 +68,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ````
-
-## Topics
-
-For Cumulocity IoT content please add the topics
-
-* cumulocity-iot
-* iot-analytics
-
-Also add one or multiple topics of the following categories:
-* 'agent' or 'cumulocity-agent'
-* 'webapp' or 'cumulocity-webapp'
-* 'widget' or 'cumulocity-widget'
-* 'client' or 'cumulocity-client'
-* 'cli' or 'cumulocity-cli'
-* 'microservice' or 'cumulocity-microservice'
-* 'example' or 'cumulocity-example'
-* 'tutorial' or 'cumulocity-tutorial'
-* 'simulator' or 'cumulocity-simulator'
-* 'extension' or 'cumulocity-extension'
-* 'documentation' or 'cumulocity-documentation'
-
-Beside that you should add additional topics like 'iot' or others which match to the content of your repo.
-
-## README structure
-
-The README.md should be structured in the following way:
-
-1. Overview about the Repo / Component
-2. Installation
-3. Run / Quick Start
-4. Build
-5. (opt) Release Notes
-6. (opt) Contributing Guidelines (either part of the README or in a separate CONTRIBUTING.md)
-7. Footer to TechCommunity
-
-Please always add the following footer to your README.md
-
----
-
-These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
-
-For more information you can Ask a Question in the [TECH Community Forums](https://tech.forums.softwareag.com/tag/Cumulocity-IoT).
-
-Contact us at [TECHcommunity](mailto:Communities@softwareag.com?subject=Github/SoftwareAG) if you have any questions.
-
----
-
-## Github Settings
-
-There are multiple settings you can make use of in your repository.
-First of all we suggest to enable the Code Security and analysis functionality which includes a [Dependency graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph), [Dependabot alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts) and [Dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates).
-
-![img.png](img.png)
-
-# Questions about this template
-
-If you have any questions or suggestions regarding this template please create an [issue](https://github.com/SoftwareAG/cumulocity-iot-template/issues/new)
-
----
-# PLEASE REPLACE THE PART ABOVE WITH YOUR OWN CONTENT !!!
-
 
 
 
