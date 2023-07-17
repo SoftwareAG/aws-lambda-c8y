@@ -1,5 +1,5 @@
 # AWS Lambda c8y
-This repo contains an sample AWS Lambda service that would show how to integrate the Cumulocity JAVA Microservice SDK.In this sample service we have a sampel code to check and register a device.
+- This repo contains an sample AWS Lambda service that would show how to integrate the Cumulocity JAVA Microservice SDK.In this sample service we have a sampel code to check and register a device.
 ---
 
 ## Requirement
@@ -33,17 +33,19 @@ This repo contains an sample AWS Lambda service that would show how to integrate
   "identityType": "c8y_serial"
 }
 
+![Alt text](image-1.png)
+
 
 ## Logs
-The default AWS lambda logging would would be used and all the logs will be populated into AWS Cloud watch automatically for Analysis purpose.
+- The default AWS lambda logging would would be used and all the logs will be populated into AWS Cloud watch automatically for Analysis purpose.
 
 ## Config
 
-Since the AWS Lambda service is an stateless service we won't be able to persist anything. If you want to persist anything you can persist in the AWS S3, dynamo DB or any external system or hardcode within Lambda service (it's not a best practices).
+- Since the AWS Lambda service is an stateless service we won't be able to persist anything. If you want to persist anything you can persist in the AWS S3, dynamo DB or any external system or hardcode within Lambda service (it's not a best practices).
 
 ## Cumulocity Integration
 
-Using Cumulocity Microservice JAVA SDK the AWS Lammbda service can integrate with Cumulocity platform 
+- Using Cumulocity Microservice JAVA SDK the AWS Lammbda service can integrate with Cumulocity platform 
 
 ### License
 We strongly suggest that you use the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
