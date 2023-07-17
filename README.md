@@ -1,5 +1,5 @@
 # AWS Lambda c8y
-- This repo contains an sample AWS Lambda service that would show how to integrate the Cumulocity JAVA Microservice SDK.This sample service have a sample code to check and register a device.
+- This repo contains an sample AWS Lambda service that would show how to integrate the Cumulocity JAVA Microservice SDK.This sample service have a sample code to check and register a device with Cumulocity Platform.
 ---
 
 ## Requirement
@@ -26,14 +26,14 @@
 * Upload the JAR into S3 bucket and copy the URL
 * In the AWS Lambda function in code section select upload from S3 and past the link and save
 * This code can be tested with Below JSON input as Event (Sample).
-{
-  "deviceName": "TestDevice",
-  "serialNumber": "123456789",
-  "deviceType": "c8y_MQTT",
-  "identityType": "c8y_serial"
-}
+* {
+    "deviceName": "TestDevice",
+    "serialNumber": "123456789",
+    "deviceType": "c8y_MQTT",
+    "identityType": "c8y_serial"
+ }
 
- ![Alt text](image-1.png)
+ ![Alt text](image-2.png)
 
 
 ## Logs
